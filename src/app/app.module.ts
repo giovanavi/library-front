@@ -15,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 import { LivroReadComponent } from './views/livro/livro-read/livro-read.component';
+import { LivroMainComponent } from './views/livro/livro-main/livro-main.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { LivroReadComponent } from './views/livro/livro-read/livro-read.componen
     FooterComponent,
     NavComponent,
     HomeComponent,
-    LivroReadComponent
+    LivroReadComponent,
+    LivroReadComponent,
+    LivroMainComponent
   ],
   imports: [
     BrowserModule,
