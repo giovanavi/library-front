@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+
+import { HttpClientModule } from '@angular/common/http';
+
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -37,7 +40,8 @@ import { LivroMainComponent } from './views/livro/livro-main/livro-main.componen
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
