@@ -10,7 +10,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatButtonModule} from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -19,6 +19,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 import { LivroReadComponent } from './views/livro/livro-read/livro-read.component';
 import { LivroMainComponent } from './views/livro/livro-main/livro-main.component';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,9 @@ import { LivroMainComponent } from './views/livro/livro-main/livro-main.componen
     MatListModule,
     MatCardModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,7 +14,7 @@ export class LivroService {
   constructor(private http: HttpClient) { }
 
   findAll(): Observable<Livro[]>{
-    const url = `${this.baseUrl}/livro`
+    const url = `${this.baseUrl}/livro/`
 
     return this.http.get<Livro[]>(url)
   }

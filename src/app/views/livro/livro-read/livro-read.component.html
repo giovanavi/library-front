@@ -1,16 +1,19 @@
 <div class="content">
+  
   <div class="title">
-
     <h1>Livros</h1>
+  </div>
+  
+  <button mat-raised-button> Cadastrar Livro</button>
 
-    <table mat-table class="table mat-elevation-z8">
+    <table mat-table [dataSource]="livros" class="table mat-elevation-z8">
 
       <!--- Note that these columns can be defined in any order.
             The actual rendered columns are set as a property on the row definition" -->
 
       <!-- Nome Column -->
       <ng-container matColumnDef="nome">
-        <th mat-header-cell *matHeaderCellDef> NOME </th>
+        <th *matHeaderCellDef> NOME </th>
         <td mat-cell *matCellDef="let row"> {{row.nome}} </td>
       </ng-container>
 
@@ -40,12 +43,18 @@
 
       <!-- Ações Column -->
       <ng-container matColumnDef="acoes">
-        <th mat-header-cell *matHeaderCellDef> AÇÕES </th>
-        <td mat-cell *matCellDef="let row">  </td>
+        <th class="mat-header" *matHeaderCellDef> AÇÕES </th>
+        <td mat-cell *matCellDef="let row">  
+          <a class='edit' href="#" >
+            <i class="material-icons">edit</i>
+          </a>
+          <a class='delete' href="#">
+            <i class="material-icons">delete</i>
+          </a>
+        </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-  </div>
 </div>

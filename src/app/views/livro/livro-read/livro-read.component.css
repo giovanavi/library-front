@@ -5,7 +5,6 @@
 
 .title{
   text-align: center;
-  margin-bottom: 3em;
 }
 
 .title h1{
@@ -14,11 +13,30 @@
   font-weight: 500;
 }
 
+button{
+  margin-bottom: .8rem;
+}
+
 .table{
   background-color: #e2f3f2;
 }
 
 th{
   color: #524444;
+  text-align: center;
 }
+
+td{
+  text-align: center;
+}
+
+.edit{
+  color: #524444;
+}
+
+.delete{
+  color: #e43838;
+  margin-left: .5rem;
+}
+
 
