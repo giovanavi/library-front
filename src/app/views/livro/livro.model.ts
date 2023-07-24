@@ -5,6 +5,6 @@ export interface Livro{
     autor: string,
     editora: string,
     genero: string,
-    status: string,
+    status?: string,
 }
 

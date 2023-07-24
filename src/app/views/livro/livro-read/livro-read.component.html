@@ -4,7 +4,7 @@
     <h1>Livros</h1>
   </div>
   
-  <button mat-raised-button> Cadastrar Livro</button>
+  <button (click)="goToCreateLivro()" mat-raised-button> Cadastrar Livro</button>
 
     <table mat-table [dataSource]="livros" class="table mat-elevation-z8">
 

@@ -1,0 +1,34 @@
+<form action="">
+    <h1>CADASTRANDO LIVRO </h1>
+
+    <mat-form-field class="form">
+        <mat-label> Nome </mat-label>
+        <input [(ngModel)]="livro.nome" matInput type="text" name="name">
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label> Autor </mat-label>
+        <input [(ngModel)]="livro.autor" matInput type="text" name="autor">
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label> Editora </mat-label>
+        <input [(ngModel)]="livro.editora" matInput type="text" name="editora">
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label> Genero </mat-label>
+        <input [(ngModel)]="livro.genero" matInput type="text" name="genero">
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label> ISBN </mat-label>
+        <input [(ngModel)]="livro.isbn" matInput type="number" name="isbn">
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="create()" mat-raised-button>Cadastrar</button>
+        <button mat-raised-button color="warn">Cancelar</button>
+    </div>
+
+</form>
