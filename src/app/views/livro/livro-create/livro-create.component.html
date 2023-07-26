@@ -3,27 +3,27 @@
 
     <mat-form-field class="form">
         <mat-label> Nome </mat-label>
-        <input [(ngModel)]="livro.nome" matInput type="text" name="name">
+        <input matInput type="text" name="name" required minlength="3" [(ngModel)]="livro.nome">
     </mat-form-field>
 
     <mat-form-field class="form">
         <mat-label> Autor </mat-label>
-        <input [(ngModel)]="livro.autor" matInput type="text" name="autor">
+        <input matInput type="text" name="autor" required minlength="3" [(ngModel)]="livro.autor" >
     </mat-form-field>
 
     <mat-form-field class="form">
         <mat-label> Editora </mat-label>
-        <input [(ngModel)]="livro.editora" matInput type="text" name="editora">
+        <input matInput type="text" name="editora" required minlength="3" [(ngModel)]="livro.editora">
     </mat-form-field>
 
     <mat-form-field class="form">
         <mat-label> Genero </mat-label>
-        <input [(ngModel)]="livro.genero" matInput type="text" name="genero">
+        <input matInput type="text" name="genero" required minlength="3" [(ngModel)]="livro.genero">
     </mat-form-field>
 
     <mat-form-field class="form">
         <mat-label> ISBN </mat-label>
-        <input [(ngModel)]="livro.isbn" matInput type="number" name="isbn">
+        <input matInput type="number" name="isbn" required minlength="8" maxlength="13" [(ngModel)]="livro.isbn">
     </mat-form-field>
 
     <div class="buttons">
