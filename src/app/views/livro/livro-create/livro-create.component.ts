@@ -37,5 +37,9 @@ export class LivroCreateComponent implements OnInit{
     )
   }
 
+  cancel(): void{
+    this.router.navigate(['livros'])
+  }
+
 }
 
