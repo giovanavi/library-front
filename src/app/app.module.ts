@@ -23,6 +23,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { LivroCreateComponent } from './views/livro/livro-create/livro-create.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DeleteDialogComponent } from './components/delete-dialog/delete-dialog.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     HomeComponent,
     LivroReadComponent,
     LivroReadComponent,
-    LivroCreateComponent
+    LivroCreateComponent,
+    LivroCreateComponent,
+    DeleteDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

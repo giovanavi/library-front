@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { LivroService } from '../livro.service';
 import { Livro } from '../livro.model';
 import { Router } from '@angular/router';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-livro-create',
@@ -40,6 +39,19 @@ export class LivroCreateComponent implements OnInit{
   cancel(): void{
     this.router.navigate(['livros'])
   }
+
+
+
+  // openDialog(): void {
+  //   const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+  //     data: {name: this.name, animal: this.animal},
+  //   });
+
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log('The dialog was closed');
+  //     this.animal = result;
+  //   });
+  // }
 
 }
 

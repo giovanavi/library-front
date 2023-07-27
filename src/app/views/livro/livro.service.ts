@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Livro } from './livro.model';
 import { environment } from 'src/environments/environments';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router, UrlHandlingStrategy } from '@angular/router';
 
 
 @Injectable({
@@ -13,7 +14,7 @@ export class LivroService {
 
   baseUrl: String = environment.baseUrl
 
-  constructor(private http: HttpClient, private _snack: MatSnackBar) { }
+  constructor(private http: HttpClient, private _snack: MatSnackBar, private router: Router) { }
 
   findAll(): Observable<Livro[]>{
     const url = `${this.baseUrl}/livro/`
@@ -27,8 +28,19 @@ export class LivroService {
     return this.http.post<Livro>(url, livro)
   }
 
+  delete(id: number):Observable<void>{
+    const url = `${this.baseUrl}/livro/${id}`
+    console.log(url)
+    return this.http.delete<void>(url)
+  }
+
   mensagem(str: string): void{
     this._snack.open(`${str}`, 'Ok', 
-    {horizontalPosition: 'center', verticalPosition: 'bottom', duration: 3000})
+    {horizontalPosition: 'center', verticalPosition: 'top', duration: 3000})
   }
+
+  redirectTo(uri: string) {
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() =>
+    this.router.navigate([uri]));
+ }
 }

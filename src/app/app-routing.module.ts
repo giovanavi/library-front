@@ -7,7 +7,7 @@ import { LivroCreateComponent } from './views/livro/livro-create/livro-create.co
 const routes: Routes = [
   {path: "", component: HomeComponent},
   {path: "livros", component: LivroReadComponent},
-  {path: "livros/create", component: LivroCreateComponent } 
+  {path: "livros/create", component: LivroCreateComponent }
 ];
 
 @NgModule({
