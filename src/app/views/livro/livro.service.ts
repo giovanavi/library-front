@@ -18,7 +18,6 @@ export class LivroService {
 
   findAll(): Observable<Livro[]>{
     const url = `${this.baseUrl}/livro/`
-
     return this.http.get<Livro[]>(url)
   }
 
