@@ -33,6 +33,10 @@ export class LivroReadComponent implements OnInit {
     this.router.navigate(["livros/create"])
   }
 
+  goToUpdateLivro(id: number){
+    this.router.navigate([`livros/update/${id}`])
+  }
+
   delete(id:number): void{
     const dialogRef = this.dialog.open(DeleteDialogComponent, {
       data: 'Tem certeza que deseja remover esse curso?',

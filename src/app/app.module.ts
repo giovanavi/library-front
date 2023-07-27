@@ -25,6 +25,7 @@ import { LivroCreateComponent } from './views/livro/livro-create/livro-create.co
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DeleteDialogComponent } from './components/delete-dialog/delete-dialog.component';
+import { LivroUpdateComponent } from './views/livro/livro-update/livro-update.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { DeleteDialogComponent } from './components/delete-dialog/delete-dialog.
     LivroReadComponent,
     LivroCreateComponent,
     LivroCreateComponent,
-    DeleteDialogComponent
+    DeleteDialogComponent,
+    LivroUpdateComponent
   ],
   imports: [
     BrowserModule,

@@ -29,9 +29,7 @@ export class LivroCreateComponent implements OnInit{
       this.router.navigate(['livros'])
       this.service.mensagem("Livro criado com sucesso !")
     }, err =>{
-      for (let i = 0; i < err.error.errors.length; i++) {
-        this.service.mensagem(err.error.errors[i].message)
-      }
+      this.service.mensagem("Verifique se todos os campos estão preenchidos corretamente")
     }
     )
   }
@@ -39,19 +37,6 @@ export class LivroCreateComponent implements OnInit{
   cancel(): void{
     this.router.navigate(['livros'])
   }
-
-
-
-  // openDialog(): void {
-  //   const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-  //     data: {name: this.name, animal: this.animal},
-  //   });
-
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log('The dialog was closed');
-  //     this.animal = result;
-  //   });
-  // }
-
+  
 }
 

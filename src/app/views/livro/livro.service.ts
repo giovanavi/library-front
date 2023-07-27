@@ -22,15 +22,23 @@ export class LivroService {
     return this.http.get<Livro[]>(url)
   }
 
-  create(livro: Livro):Observable<Livro>{
+  findById(id: number): Observable<Livro>{
+    const url = `${this.baseUrl}/livro/${id}`
+    return this.http.get<Livro>(url)
+  }
+
+  create(livro: Livro): Observable<Livro>{
     const url = `${this.baseUrl}/livro`
-    
     return this.http.post<Livro>(url, livro)
+  }
+
+  update(livro: Livro): Observable<void>{
+    const url = `${this.baseUrl}/livro/${livro._id}`
+    return this.http.put<void>(url, livro)
   }
 
   delete(id: number):Observable<void>{
     const url = `${this.baseUrl}/livro/${id}`
-    console.log(url)
     return this.http.delete<void>(url)
   }
 
