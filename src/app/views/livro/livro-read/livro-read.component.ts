@@ -34,7 +34,6 @@ export class LivroReadComponent implements OnInit {
   }
 
   delete(id:number): void{
-
     const dialogRef = this.dialog.open(DeleteDialogComponent, {
       data: 'Tem certeza que deseja remover esse curso?',
     });
@@ -51,34 +50,8 @@ export class LivroReadComponent implements OnInit {
         );
       }
     });
-
-
-
-    // this.service.delete(id!).subscribe(resposta => {
-    //   this.service.redirectTo('livros')
-    //   this.service.mensagem('Livro deletado com sucesso!')
-    // }, err =>{
-    //   this.service.mensagem(err.error.message)
-    // })
   }
 
-
-
-
 }
-
-  // openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-  //   this.dialog.open(DeleteDialogComponent, {
-  //     width: '250px',
-  //     enterAnimationDuration,
-  //     exitAnimationDuration,
-  //   });
-
-    // this.service.delete(this.livro.id?: String || undefined).subscribe(resposta => {
-    //   this.service.mensagem('Categoria deletada com sucesso!')
-      // openDialog()
-    // })
-
-  // }
 
   
