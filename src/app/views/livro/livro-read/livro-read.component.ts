@@ -28,14 +28,6 @@ export class LivroReadComponent implements OnInit {
       this.livros = resposta
     })
   }
-  
-  goToCreateLivro(){
-    this.router.navigate(["livros/create"])
-  }
-
-  goToUpdateLivro(id: number){
-    this.router.navigate([`livros/update/${id}`])
-  }
 
   delete(id:number): void{
     const dialogRef = this.dialog.open(DeleteDialogComponent, {
@@ -54,6 +46,14 @@ export class LivroReadComponent implements OnInit {
         );
       }
     });
+  }
+
+  goToCreateLivro(){
+    this.router.navigate(["livros/create"])
+  }
+
+  goToUpdateLivro(id: number){
+    this.router.navigate([`livros/update/${id}`])
   }
 
 }
